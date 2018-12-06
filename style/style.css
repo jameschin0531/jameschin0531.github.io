@@ -1,0 +1,143 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  max-width: 60%;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.logo {
+  height: 100%px;
+  width: auto;
+}
+
+h3,
+p {
+  color: #77716e;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #fffefd;
+  max-width: 70%;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+}
+.form .alert {
+  text-align: left;
+  margin-bottom: 15px;
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #ffffff;
+  width: 100%;
+  border: 1;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #c7bdb7;
+  margin: 10px 0 10px 0;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #595959;
+}
+.form .message {
+  float: right;
+  margin: 5px 0 0;
+  color: #b3b3b3;
+  font-size: 16px;
+}
+.form .message a {
+  color: #fbc47b;
+  text-decoration: none;
+}
+
+.form .message1 a {
+  float: left;
+  margin: 5px 0 0;
+
+  font-size: 16px;
+  color: #fbc47b;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before,
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #ef3b3a;
+}
+body {
+  background: #f6f4f4; /* fallback for old browsers */
+
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-size: 14px;
+}
+
+.form a {
+  color: #fbc47b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .login-page {
+    max-width: 100%;
+  }
+
+  .form {
+    max-width: 100%;
+  }
+}
