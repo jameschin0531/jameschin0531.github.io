@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="description" content="Bootstrap Admin App + jQuery" />
+    <meta
+      name="keywords"
+      content="app, responsive, jquery, bootstrap, dashboard, admin"
+    />
+    <title>Balance page</title>
+    <!-- =============== VENDOR STYLES =============== -->
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css" />
+    <!-- SIMPLE LINE ICONS -->
+    <link
+      rel="stylesheet"
+      href="vendor/simple-line-icons/css/simple-line-icons.css"
+    />
+    <!-- ANIMATE.CSS -->
+    <link rel="stylesheet" href="vendor/animate.css/animate.min.css" />
+    <!-- WHIRL (spinners) -->
+    <link rel="stylesheet" href="vendor/whirl/dist/whirl.css" />
+    <!-- =============== PAGE VENDOR STYLES =============== -->
+    <!-- =============== BOOTSTRAP STYLES =============== -->
+    <link rel="stylesheet" href="css/bootstrap.css" id="bscss" />
+    <!-- =============== APP STYLES =============== -->
+    <link rel="stylesheet" href="css/app.css" id="maincss" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- top navbar -->
+      <header class="topnavbar-wrapper">
+        <!-- START Top Navbar -->
+        <nav class="navbar topnavbar" role="navigation">
+          <!-- START Nav wrapper -->
+          <div class="nav-wrapper">
+            <!-- START Left navbar -->
+
+            <ul class="nav navbar-nav">
+              <li>
+                <div class="brand-logo">
+                  <img
+                    class="img-responsive"
+                    src="asset/Logo/logo-01.png"
+                    style="height:30px;width:80x; margin: 10px"
+                    alt="App Logo"
+                  />
+                </div>
+              </li>
+
+              <li><a href="#">Exchange</a></li>
+            </ul>
+            <!-- END Left navbar -->
+            <!-- START Right Navbar -->
+            <ul class="nav navbar-nav navbar-right">
+              <!-- Search icon -->
+              <li>
+                <a href="#"> <p>Funds</p> </a>
+              </li>
+              <!-- Fullscreen (only desktops) -->
+              <li>
+                <a href="#"> <p>Orders</p> </a>
+              </li>
+              <li>
+                <a href="#"> <p>Orders</p> </a>
+              </li>
+              <li>
+                <a href="#"> <p>Join Us</p> </a>
+              </li>
+              <li>
+                <a href="#"> <p>Support</p> </a>
+              </li>
+              <!-- START Alert menu -->
+              <li class="dropdown dropdown-list">
+                <a
+                  id="user-block-toggle"
+                  href="#user-block"
+                  data-toggle="collapse"
+                >
+                  <em class="icon-user"></em>
+                </a>
+              </li>
+              <!-- END Alert menu -->
+              <!-- START Offsidebar button -->
+              <li>
+                <a
+                  href="#"
+                  data-toggle-state="offsidebar-open"
+                  data-no-persist="true"
+                >
+                  <span>English</span>
+                </a>
+              </li>
+              <!-- END Offsidebar menu -->
+            </ul>
+            <!-- END Right Navbar -->
+          </div>
+          <!-- END Nav wrapper -->
+        </nav>
+        <!-- END Top Navbar -->
+      </header>
+      <!-- sidebar -->
+
+      <!-- offsidebar -->
+
+      <!-- Main section -->
+      <section>
+        <!-- Page content -->
+        <div class="content-wrapper">
+          <p class="acc">
+            <a
+              data-toggle="collapse"
+              data-parent="#accordion"
+              href="#acc1collapse1"
+              aria-expanded="false"
+              class="collapsed"
+              style="color: #AE957A"
+              >Security Reminder: Check the URL you are visiting and enable 2FA.
+              Do not disclose your password or make transactions with anyone
+              claiming to be Binance employees</a
+            >
+
+            <a
+              data-toggle="collapse"
+              data-parent="#accordion"
+              href="#acc1collapse1"
+              aria-expanded="false"
+              class="collapsed"
+              ><img
+                src="asset\7. Balance\balance elements-09.png"
+                alt="Export"
+                style="width:15px;height:10px; "
+            /></a>
+          </p>
+
+          <div
+            class="panel-collapse collapse"
+            id="acc1collapse1"
+            aria-expanded="false"
+            style="height: 0px;"
+          >
+            <div class="panel-body" id="collapse01">
+              <div class="row">
+                <div class="box" style="padding-left: 15px">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Integer orci tortor, rhoncus volutpat fermentum eget, auctor
+                    a erat. Sed ut viverra eros, eu interdum neque. Donec
+                    euismod felis erat, mattis porta nisi sollicitudin et. Donec
+                    viverra pellentesque aliquet. Phasellus euismod lectus eu
+                    tellus aliquet, viverra scelerisque urna imperdiet.
+                    Phasellus nec lacus consequat, vulputate lectus quis,
+                    imperdiet eros. In sollicitudin eros felis, at elementum mi
+                    commodo id. Aliquam pretium mauris quis lectus mattis, at
+                    sodales elit malesuada.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4 class="title-bold">Balances</h4>
+          <div class="col-lg-12" style="padding:0 ">
+            <div class="col-lg-6 col-xs-8" style="padding-left: 0!important">
+              <input type="text" id="myInput" />
+              <button class="BalancesButton">HIDE 0 BALANCE</button>
+              <button class="BalancesButton" style="background-color: #F3F3F3">
+                CONVERT TO AMX
+              </button>
+            </div>
+            <div class="col-lg-6 col-xs-4" style="padding-right: 0!important">
+              <div style="float:right; clear:right">
+                <label class="control-label title-text">Estimated Value:</label>
+                <label
+                  class="control-label"
+                  style="font-size: 16px; color:#5a5a5c!important;"
+                  >0.00000000 BTC / 0.00$</label
+                >
+              </div>
+              <div style="float:right; clear:right">
+                <label class="control-label title-text"
+                  >24h Withdrawal Limit: 100 BTC</label
+                >
+                <label class="control-label title-text">BTC In Use: 0BTC</label>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class=" col-lg-12 no-padding "
+            style="border: 2px solid #E9C795;min-height: inherit;overflow: auto; clear:both"
+          >
+            <table class="table limittable o">
+              <thead style="background-color: #F3F3F3">
+                <tr>
+                  <th>Coin</th>
+                  <th>Name</th>
+                  <th>Total Balance</th>
+                  <th>Available Balance</th>
+                  <th>In order</th>
+                  <th>BTC Value</th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>XLM</td>
+                  <td>Stellar Lumens</td>
+                  <td>0.41000000</td>
+                  <td>0.41000000</td>
+                  <td>0.00000000</td>
+                  <td>0.0000015333</td>
+                  <td>
+                    <button class="mb-sm btn btn-default" type="button">
+                      Deposit
+                    </button>
+                  </td>
+                  <td>
+                    <button class="mb-sm btn btn-default" type="button">
+                      Withdrawal
+                    </button>
+                  </td>
+                  <td>
+                    <button class="mb-sm btn btn-default" type="button">
+                      Trade
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>XLM</td>
+                  <td>Stellar Lumens</td>
+                  <td>0.41000000</td>
+                  <td>0.41000000</td>
+                  <td>0.00000000</td>
+                  <td>0.0000015333</td>
+                  <td>
+                    <button class="mb-sm btn btn-default" type="button">
+                      Deposit
+                    </button>
+                  </td>
+                  <td>
+                    <button class="mb-sm btn btn-default" type="button">
+                      Withdrawal
+                    </button>
+                  </td>
+                  <td>
+                    <button class="mb-sm btn btn-default" type="button">
+                      Trade
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>XLM</td>
+                  <td>Stellar Lumens</td>
+                  <td>0.41000000</td>
+                  <td>0.41000000</td>
+                  <td>0.00000000</td>
+                  <td>0.0000015333</td>
+                  <td>
+                    <button class="mb-sm btn btn-default" type="button">
+                      Deposit
+                    </button>
+                  </td>
+                  <td>
+                    <button class="mb-sm btn btn-default" type="button">
+                      Withdrawal
+                    </button>
+                  </td>
+                  <td>
+                    <button class="mb-sm btn btn-default" type="button">
+                      Trade
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="row" style="border-bottom:1px solid #3a3a3c;">
+        <div style="float:left" class="footerlink">
+          <a>About</a> <a>Terms</a> <a>Privacy</a> <a>Fees</a> <a>Contact</a>
+          <a>API</a> <a>Appy to List</a> <a>Download</a>
+        </div>
+        <div style="float:right" class="sociallink">
+          <img
+            src="asset/Footer/footer-03.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-04.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-05.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-06.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-07.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-08.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-09.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-10.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-11.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+        </div>
+      </div>
+      <p>©2017 - 2018 Amcex. All rights reserved</p>
+    </footer>
+    <!-- =============== VENDOR SCRIPTS =============== -->
+    <!-- MODERNIZR -->
+    <script src="vendor/modernizr/modernizr.custom.js"></script>
+    <!-- MATCHMEDIA POLYFILL -->
+    <script src="vendor/matchMedia/matchMedia.js"></script>
+    <!-- JQUERY -->
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <!-- BOOTSTRAP -->
+    <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- STORAGE API -->
+    <script src="vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+    <!-- JQUERY EASING -->
+    <script src="vendor/jquery.easing/js/jquery.easing.js"></script>
+    <!-- ANIMO -->
+    <script src="vendor/animo.js/animo.js"></script>
+    <!-- SLIMSCROLL -->
+    <script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- SCREENFULL -->
+    <script src="vendor/screenfull/dist/screenfull.js"></script>
+    <!-- LOCALIZE -->
+    <script src="vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
+    <!-- RTL demo -->
+    <script src="js/demo/demo-rtl.js"></script>
+    <!-- =============== PAGE VENDOR SCRIPTS =============== -->
+    <!-- CHOSEN -->
+    <script src="vendor/chosen_v1.2.0/chosen.jquery.min.js"></script>
+    <!-- SLIDER CTRL -->
+    <script src="vendor/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+    <!-- MOMENT JS -->
+    <script src="vendor/moment/min/moment-with-locales.min.js"></script>
+    <!-- DATETIMEPICKER -->
+    <script
+      type="text/javascript"
+      src="vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"
+    ></script>
+    <!-- Demo -->
+    <script src="js/demo/demo-search.js"></script>
+    <!-- =============== APP SCRIPTS =============== -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

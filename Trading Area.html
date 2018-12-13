@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="description" content="Bootstrap Admin App + jQuery" />
+    <meta
+      name="keywords"
+      content="app, responsive, jquery, bootstrap, dashboard, admin"
+    />
+    <title>Trading Area</title>
+    <!-- =============== VENDOR STYLES =============== -->
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css" />
+    <!-- SIMPLE LINE ICONS -->
+    <link
+      rel="stylesheet"
+      href="vendor/simple-line-icons/css/simple-line-icons.css"
+    />
+    <!-- ANIMATE.CSS -->
+    <link rel="stylesheet" href="vendor/animate.css/animate.min.css" />
+    <!-- WHIRL (spinners) -->
+    <link rel="stylesheet" href="vendor/whirl/dist/whirl.css" />
+    <!-- =============== PAGE VENDOR STYLES =============== -->
+    <!-- =============== BOOTSTRAP STYLES =============== -->
+    <link rel="stylesheet" href="css/bootstrap.css" id="bscss" />
+    <!-- =============== APP STYLES =============== -->
+    <link rel="stylesheet" href="css/app.css" id="maincss" />
+  </head>
+
+  <body style="background: white;">
+    <div class="wrapper">
+      <!-- top navbar -->
+      <header class="topnavbar-wrapper">
+        <!-- START Top Navbar -->
+        <nav class="navbar topnavbar" role="navigation">
+          <!-- START Nav wrapper -->
+          <div class="nav-wrapper">
+            <!-- START Left navbar -->
+
+            <ul class="nav navbar-nav">
+              <li>
+                <div class="brand-logo">
+                  <img
+                    class="img-responsive"
+                    src="asset/Logo/logo-01.png"
+                    style="height:30px;width:80x; margin: 10px"
+                    alt="App Logo"
+                  />
+                </div>
+              </li>
+
+              <li><a href="#">Exchange</a></li>
+            </ul>
+            <!-- END Left navbar -->
+            <!-- START Right Navbar -->
+            <ul class="nav navbar-nav navbar-right">
+              <!-- Search icon -->
+              <li>
+                <a href="#"> <p>Funds</p> </a>
+              </li>
+              <!-- Fullscreen (only desktops) -->
+              <li>
+                <a href="#"> <p>Orders</p> </a>
+              </li>
+              <li>
+                <a href="#"> <p>Orders</p> </a>
+              </li>
+              <li>
+                <a href="#"> <p>Join Us</p> </a>
+              </li>
+              <li>
+                <a href="#"> <p>Support</p> </a>
+              </li>
+              <!-- START Alert menu -->
+              <li class="dropdown dropdown-list">
+                <a
+                  id="user-block-toggle"
+                  href="#user-block"
+                  data-toggle="collapse"
+                >
+                  <em class="icon-user"></em>
+                </a>
+              </li>
+              <!-- END Alert menu -->
+              <!-- START Offsidebar button -->
+              <li>
+                <a
+                  href="#"
+                  data-toggle-state="offsidebar-open"
+                  data-no-persist="true"
+                >
+                  <span>English</span>
+                </a>
+              </li>
+              <!-- END Offsidebar menu -->
+            </ul>
+            <!-- END Right Navbar -->
+          </div>
+          <!-- END Nav wrapper -->
+        </nav>
+        <!-- END Top Navbar -->
+      </header>
+
+      <!-- Main section -->
+      <div class="content-wrapper">
+        <!-- Page content -->
+
+        <div class="col-lg-9 small-screen">
+          <div class="col-lg-12 trade-title">
+            <div class="title-item">
+              <h4>BTC<span class="grey">/USD</span></h4>
+              <p>Bitcoin</p>
+            </div>
+            <div>
+              <h4 class="grey">Last Price</h4>
+              <p class="bold">
+                <span class="green" style="margin-right:10px">xxxxxxxx</span
+                >xxxxxxxx
+              </p>
+            </div>
+
+            <div>
+              <h4 class="grey">24h Change</h4>
+              <p class="red bold">
+                <span style="margin-right:10px">xxxxxxxx</span>-xxx%
+              </p>
+            </div>
+            <div>
+              <h4 class="grey">24h High</h4>
+              <p class="dark-grey bold">xxxxxxxx</p>
+            </div>
+            <div>
+              <h4 class="grey">24h Low</h4>
+              <p class="dark-grey bold">xxxxxxxx</p>
+            </div>
+
+            <div>
+              <h4 class="grey">24h Volume</h4>
+              <p class="dark-grey bold">xxxxxxxx xxx</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <button class="order-b">ACTIVE ORDERBOOK</button>
+            <div class="table-frame">
+              <div class="table-responsive">
+                <table class="table table-trade">
+                  <thead class="grey">
+                    <tr>
+                      <th>Price</th>
+                      <th>Amount (XRP)</th>
+                      <th>Total (BTH)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-responsive">
+                <div class="grey-back table-title">
+                  <div class="header-item"><h3 class="green">xxxxxx</h3></div>
+                  <div class="header-item"><h3>xxxxxx</h3></div>
+                </div>
+                <table class="table table-trade1">
+                  <tbody>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td>xxxxxxxx</td>
+                      <td>xxx</td>
+                      <td>xxxxxxxx</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 ">
+            <div class="gold-frame" style="overflow: hidden"><div id="myDiv" style="overflow: hidden"></div></div>
+            <div>
+              <h3>Open Order (<span class="gold">0</span>)</h3>
+              <div class="table-responsive grey-border">
+                <table class="table">
+                  <thead class="grey grey-border grey-back">
+                    <tr>
+                      <th class=" grey-border">Date</th>
+                      <th class=" grey-border">Pair</th>
+                      <th class=" grey-border">Type</th>
+                      <th class=" grey-border">Side</th>
+                      <th class=" grey-border">Price</th>
+                      <th class=" grey-border">Amount</th>
+                      <th class=" grey-border">Filted</th>
+                      <th class=" grey-border">Total</th>
+                      <th class=" grey-border">Trigger Condition</th>
+                      <th class=" grey-border">Cancel all</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="grey-border grey-back">
+                      <td colspan="10" style="padding:20px 31%; color:black;">
+                        You have no open order right now
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 small-screen" style="margin-bottom: 20px;">
+            <div class="gold-frame">
+                <div class="tab grey-back
+                ">
+                        <button
+                          class="tablinks a"
+                          onclick="openCity(event, 'London')"
+                          id="defaultOpen"
+                        >
+                          AMC
+                        </button>
+                        <button class="tablinks a" onclick="openCity(event, 'Paris')">
+                          BTC
+                        </button>
+                        <button class="tablinks a" onclick="openCity(event, 'Tokyo')">
+                          <span style="color:goldenrod">BTC ETH</span>
+                        </button>
+                        <button class="tablinks a" onclick="openCity(event, 'Tokyo')">
+                          USDT
+                        </button>
+                        <button class="tablinks a" onclick="openCity(event, 'Tokyo')" style="float:right">
+                          Favourites
+                        </button>
+                </div>
+              
+                      <!-- Tab content -->
+                      <div id="London" class="tabcontent gold-frame">
+                        <div class="table-responsive table-bordered">
+                          <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Pair</th>
+                                    <th>Price</th>                         
+                                    <th>Change</th>                     
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>xxxxxx</td>
+                                    <td><span class="red">xxxxxx</span></td>
+                                    <td><span class="green">xxxx</span></td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx</td>
+                                    <td><span class="red">xxxxxx</span></td>
+                                    <td><span class="green">xxxx</span></td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx</td>
+                                    <td><span class="red">xxxxxx</span></td>
+                                    <td><span class="green">xxxx</span></td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx</td>
+                                    <td><span class="red">xxxxxx</span></td>
+                                    <td><span class="green">xxxx</span></td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx</td>
+                                    <td><span class="red">xxxxxx</span></td>
+                                    <td><span class="green">xxxx</span></td>
+                                </tr>
+                                          
+                            </tbody>
+                        </table>
+                        </div>
+                      </div>
+              
+                      <div id="Paris" class="tabcontent gold-frame">
+                        <div class="table-responsive table-bordered">
+                          <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Pair</th>
+                                    <th>Price</th>                         
+                                    <th>Change</th>                     
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>xxxxxx</td>
+                                    <td><span class="red">xxxxxx</span></td>
+                                    <td><span class="green">xxxx</span></td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx</td>
+                                    <td><span class="red">xxxxxx</span></td>
+                                    <td><span class="green">xxxx</span></td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx</td>
+                                    <td><span class="red">xxxxxx</span></td>
+                                    <td><span class="green">xxxx</span></td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx</td>
+                                    <td><span class="red">xxxxxx</span></td>
+                                    <td><span class="green">xxxx</span></td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx</td>
+                                    <td><span class="red">xxxxxx</span></td>
+                                    <td><span class="green">xxxx</span></td>
+                                </tr>
+                                          
+                            </tbody>
+                        </table>
+                        </div>
+                      </div>
+              
+                      <div id="Tokyo" class="tabcontent gold-frame">
+                        <div class="table-responsive table-bordered">
+                          <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Pair</th>
+                                    <th>Price</th>                         
+                                    <th>Change</th>                     
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>xxxxxx</td>
+                                    <td><span class="red">xxxxxx</span></td>
+                                    <td><span class="green">xxxx</span></td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx</td>
+                                    <td><span class="red">xxxxxx</span></td>
+                                    <td><span class="green">xxxx</span></td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx</td>
+                                    <td><span class="red">xxxxxx</span></td>
+                                    <td><span class="green">xxxx</span></td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx</td>
+                                    <td><span class="red">xxxxxx</span></td>
+                                    <td><span class="green">xxxx</span></td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx</td>
+                                    <td><span class="red">xxxxxx</span></td>
+                                    <td><span class="green">xxxx</span></td>
+                                </tr>
+                                          
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+                <div class="col-lg-12">
+                    <h4 style="float:left">VIP</h4>
+                    <p  style="float:right; margin-top:10px">Fee: Taker (xxxx)/Maker(xxxxx)</p>
+                </div>
+                <div class="gold-frame" style="overflow: hidden; clear:both">
+                        <div class="tab grey-back
+                        ">
+                                <button
+                                  class="tablinks1 b"
+                                  onclick="openVIP(event, 'a')"
+                                  id="defaultOpen"
+                                >
+                                  Limit
+                                </button>
+                                <button class="tablinks1 b" onclick="openVIP(event, 'b')">
+                                  Market
+                                </button>
+                                <button class="tablinks1 b" onclick="openVIP(event, 'c')">
+                                    Stop-Limit
+                                </button>
+                             
+                        </div>
+                      
+                              <!-- Tab content -->
+                        <div id="a" class="tabcontent1  padding-20">
+                           <form class="form-horizontal ">
+                            <div class="form-group">
+                              <label class="col-lg-4 control-label">Buy XRP</label>
+                              <div class="col-lg-8">
+                                <label class="col-lg-8 control-label" style="float:right">xxxxxxx-BTC</label>
+                              </div>
+                            </div>
+                           <div class="form-group">
+                              <label class="col-lg-4 control-label">Price: </label>
+                              <div class="col-lg-8">
+                                 <input  placeholder="BTC" class="buy-form-input">
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label class="col-lg-4 control-label">Amount: </label>
+                              <div class="col-lg-8">
+                                 <input placeholder="XRP" class="buy-form-input">
+                              </div>
+                           </div>
+                          <div class="form-group">
+                            <div class="col-lg-4"></div>
+                            <div class="col-lg-8">
+                            <div class="col-lg-3 padding-lr-5">
+                              <input  placeholder="xxx" class="xxx">
+                            </div>
+                            <div class="col-lg-3 padding-lr-5">
+                              <input placeholder="xxx" class="xxx">
+                            </div>
+                            <div class="col-lg-3 padding-lr-5">
+                              <input placeholder="xxx" class="xxx">
+                            </div>
+                            <div class="col-lg-3 padding-lr-5">
+                              <input placeholder="xxx" class="xxx">
+                            </div>    
+                            </div>
+                          </div>
+                           <div class="form-group">
+                              <label class="col-lg-4 control-label">Total: </label>
+                              <div class="col-lg-8">
+                                <input placeholder="BTC" class="buy-form-input">
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <div class="col-lg-12">
+                                 <button class="btn green-back white buy-form-input" type="submit">Buy XRP</button>
+                              </div>
+                           </div>
+                        </form>
+
+                        <!-- =============== SELL XRP =============== -->
+                        <form class="form-horizontal ">
+                          <div class="form-group">
+                            <label class="col-lg-4 control-label">Sell XRP</label>
+                            <div class="col-lg-8">
+                              <label class="col-lg-8 control-label" style="float:right">xxxxxxx-XRP</label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-4 control-label">Price: </label>
+                            <div class="col-lg-8">
+                              <input placeholder="BTC" class="buy-form-input">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-4 control-label">Amount: </label>
+                            <div class="col-lg-8">
+                              <input placeholder="XRP" class="buy-form-input">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-lg-4"></div>
+                            <div class="col-lg-8">
+                              <div class="col-lg-3 padding-lr-5">
+                                <input placeholder="xxx" class="xxx">
+                              </div>
+                              <div class="col-lg-3 padding-lr-5">
+                                <input placeholder="xxx" class="xxx">
+                              </div>
+                              <div class="col-lg-3 padding-lr-5">
+                                <input placeholder="xxx" class="xxx">
+                              </div>
+                              <div class="col-lg-3 padding-lr-5">
+                                <input placeholder="xxx" class="xxx">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-4 control-label">Total: </label>
+                            <div class="col-lg-8">
+                              <input placeholder="BTC" class="buy-form-input">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-lg-12">
+                              <button class="btn red-back white buy-form-input" type="submit">Sell XRP</button>
+                            </div>
+                          </div>
+                        </form>
+                          
+                        </div>
+                      
+                        <div id="b" class="tabcontent1 ">
+                                
+                        </div>
+                      
+                        <div id="c" class="tabcontent1 ">
+                               
+                        </div>
+                </div>
+
+                <!-------------last------------->
+                <div class="col-lg-12 s-margin">
+                  <h4 style="float:left">Trade History</h4>
+                  <div class="tab">
+                    <button class="tablinks2 a" onclick="openHistory(event, '1')" style="float:right">
+                      Market
+                    </button>
+                    <button class="tablinks2 a" onclick="openHistory(event, '2')" style="float:right">
+                      Yours
+                    </button>
+                    </div>
+                  </div>
+                <div class="gold-frame" style="clear:both">
+                  <!-- Tab content -->
+                  <div id="1" class="tabcontent2 gold-frame">
+                    <div class="table-responsive table-bordered">
+                      <table class="table">    
+                        <tbody>
+                          <tr>
+                            <td>xxxxxx</td>
+                            <td><span class="red">xxxxxx</span></td>
+                            <td><span class="green">xxxx</span></td>
+                          </tr>
+                          <tr>
+                            <td>xxxxxx</td>
+                            <td><span class="red">xxxxxx</span></td>
+                            <td><span class="green">xxxx</span></td>
+                          </tr>
+                          <tr>
+                            <td>xxxxxx</td>
+                            <td><span class="red">xxxxxx</span></td>
+                            <td><span class="green">xxxx</span></td>
+                          </tr>
+                          <tr>
+                            <td>xxxxxx</td>
+                            <td><span class="red">xxxxxx</span></td>
+                            <td><span class="green">xxxx</span></td>
+                          </tr>
+                          <tr>
+                            <td>xxxxxx</td>
+                            <td><span class="red">xxxxxx</span></td>
+                            <td><span class="green">xxxx</span></td>
+                          </tr>
+                
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                
+                 
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="row" style="border-bottom:1px solid #3a3a3c;">
+        <div style="float:left" class="footerlink">
+          <a>About</a> <a>Terms</a> <a>Privacy</a> <a>Fees</a> <a>Contact</a>
+          <a>API</a> <a>Appy to List</a> <a>Download</a>
+        </div>
+        <div style="float:right" class="sociallink">
+          <img
+            src="asset/Footer/footer-03.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-04.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-05.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-06.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-07.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-08.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-09.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-10.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-11.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+        </div>
+      </div>
+      <p>©2017 - 2018 Amcex. All rights reserved</p>
+    </footer>
+
+    <!-- =============== VENDOR SCRIPTS =============== -->
+    <!-- MODERNIZR -->
+
+    <script src="vendor/modernizr/modernizr.custom.js"></script>
+    <!-- MATCHMEDIA POLYFILL -->
+    <script src="vendor/matchMedia/matchMedia.js"></script>
+    <!-- JQUERY -->
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <!-- BOOTSTRAP -->
+    <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- STORAGE API -->
+    <script src="vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+    <!-- JQUERY EASING -->
+    <script src="vendor/jquery.easing/js/jquery.easing.js"></script>
+    <!-- ANIMO -->
+    <script src="vendor/animo.js/animo.js"></script>
+    <!-- SLIMSCROLL -->
+    <script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- SCREENFULL -->
+    <script src="vendor/screenfull/dist/screenfull.js"></script>
+    <!-- LOCALIZE -->
+    <script src="vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
+    <!-- RTL demo -->
+    <script src="js/demo/demo-rtl.js"></script>
+    <!-- =============== PAGE VENDOR SCRIPTS =============== -->
+    <!-- CHOSEN -->
+    <script src="vendor/chosen_v1.2.0/chosen.jquery.min.js"></script>
+    <!-- SLIDER CTRL -->
+    <script src="vendor/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+    <!-- MOMENT JS -->
+    <script src="vendor/moment/min/moment-with-locales.min.js"></script>
+    <!-- DATETIMEPICKER -->
+    <script
+      type="text/javascript"
+      src="vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"
+    ></script>
+    <!-- Demo -->
+    <script src="js/demo/demo-search.js"></script>
+    <!-- =============== APP SCRIPTS =============== -->
+    <script src="js/app.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script>
+
+      Plotly.d3.csv(
+        "https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv",
+        function(err, rows) {
+          function unpack(rows, key) {
+            return rows.map(function(row) {
+              return row[key];
+            });
+          }
+
+          var trace = {
+            x: unpack(rows, "Date"),
+            close: unpack(rows, "AAPL.Close"),
+            high: unpack(rows, "AAPL.High"),
+            low: unpack(rows, "AAPL.Low"),
+            open: unpack(rows, "AAPL.Open"),
+
+            // cutomise colors
+            increasing: { line: { color: "#8fc53d" } },
+            decreasing: { line: { color: "#ea018c" } },
+
+            type: "candlestick",
+            xaxis: "x",
+            yaxis: "y"
+          };
+
+          var data = [trace];
+
+          var layout = {
+            dragmode: 'zoom',
+            margin: {
+              r: 10,
+              t: 25,
+              b: 40,
+              l: 25
+            },
+            showlegend: false,
+            xaxis: {
+              autorange: true,
+              rangeslider: { range: ['2017-01-17 12:00', '2017-02-10 12:00'] },
+              title: 'Date',
+              type: 'date'
+            },
+            yaxis: {
+              autorange: true,
+              type: 'linear'
+            },
+           
+            shapes: [
+              {
+                type: 'rect',
+                xref: 'x',
+                yref: 'paper',
+                x0: '2017-01-31',
+                y0: 0,
+                x1: '2017-02-01',
+                y1: 1,
+                fillcolor: '#d3d3d3',
+                opacity: 0.2,
+                line: {
+                  width: 0
+                }
+              }
+            ]
+          }
+
+          Plotly.plot("myDiv", data, layout);
+        }
+      );
+
+      
+    </script>
+
+<script>
+        function openCity(evt, name) {
+          // Declare all variables
+          var i, tabcontent, tablinks;
+  
+          // Get all elements with class="tabcontent" and hide them
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+  
+          // Get all elements with class="tablinks" and remove the class "active"
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+  
+          // Show the current tab, and add an "active" class to the button that opened the tab
+          document.getElementById(name).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+      </script>
+      
+      <script>
+        document.getElementById("defaultOpen").click();
+      </script>
+
+      <script>
+        function openHistory(evt, name) {
+          // Declare all variables
+          var i, tabcontent, tablinks;
+
+          // Get all elements with class="tabcontent" and hide them
+          tabcontent = document.getElementsByClassName("tabcontent2");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+
+          // Get all elements with class="tablinks" and remove the class "active"
+          tablinks = document.getElementsByClassName("tablinks2");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+
+          // Show the current tab, and add an "active" class to the button that opened the tab
+          document.getElementById(name).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+      </script>
+
+      <script>
+            function openVIP(evt, cityName) {
+              // Declare all variables
+              var i, tabcontent, tablinks;
+      
+              // Get all elements with class="tabcontent" and hide them
+              tabcontent = document.getElementsByClassName("tabcontent1");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+      
+              // Get all elements with class="tablinks" and remove the class "active"
+              tablinks = document.getElementsByClassName("tablinks1");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+      
+              // Show the current tab, and add an "active" class to the button that opened the tab
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+          </script>
+  </body>
+</html>

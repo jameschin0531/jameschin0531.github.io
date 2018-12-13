@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="description" content="Bootstrap Admin App + jQuery" />
+    <meta
+      name="keywords"
+      content="app, responsive, jquery, bootstrap, dashboard, admin"
+    />
+    <title>Mainpage</title>
+    <!-- =============== VENDOR STYLES =============== -->
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css" />
+    <!-- SIMPLE LINE ICONS -->
+    <link
+      rel="stylesheet"
+      href="vendor/simple-line-icons/css/simple-line-icons.css"
+    />
+    <!-- ANIMATE.CSS -->
+    <link rel="stylesheet" href="vendor/animate.css/animate.min.css" />
+    <!-- WHIRL (spinners) -->
+    <link rel="stylesheet" href="vendor/whirl/dist/whirl.css" />
+    <!-- =============== PAGE VENDOR STYLES =============== -->
+    <!-- =============== BOOTSTRAP STYLES =============== -->
+    <link rel="stylesheet" href="css/bootstrap.css" id="bscss" />
+    <!-- =============== APP STYLES =============== -->
+    <link rel="stylesheet" href="css/app.css" id="maincss" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- top navbar -->
+      <header class="topnavbar-wrapper">
+        <!-- START Top Navbar -->
+        <nav class="navbar topnavbar" role="navigation">
+          <!-- START Nav wrapper -->
+          <div class="nav-wrapper">
+            <!-- START Left navbar -->
+
+            <ul class="nav navbar-nav">
+              <li>
+                <div class="brand-logo">
+                  <img
+                    class="img-responsive"
+                    src="asset/Logo/logo-01.png"
+                    style="height:30px;width:80x; margin: 10px"
+                    alt="App Logo"
+                  />
+                </div>
+              </li>
+              <li>
+                <!--
+                  Button used to collapse the left sidebar. Only visible on tablet and desktops
+                -->
+
+                <!--
+                  Button to show/hide the sidebar on mobile. Visible on mobile only.
+                -->
+                <a
+                  class="visible-xs sidebar-toggle"
+                  href="#"
+                  data-toggle-state="aside-toggled"
+                  data-no-persist="true"
+                >
+                  <em class="fa fa-navicon"></em>
+                </a>
+              </li>
+              <li><a href="#">Exchange</a></li>
+            </ul>
+            <!-- END Left navbar -->
+            <!-- START Right Navbar -->
+            <ul class="nav navbar-nav navbar-right">
+              <!-- Search icon -->
+              <li>
+                <a href="#"> <p>Funds</p> </a>
+              </li>
+              <!-- Fullscreen (only desktops) -->
+              <li class="visible-lg">
+                <a href="#"> <p>Orders</p> </a>
+              </li>
+              <li class="visible-lg">
+                <a href="#"> <p>Orders</p> </a>
+              </li>
+              <li class="visible-lg">
+                <a href="#"> <p>Join Us</p> </a>
+              </li>
+              <li class="visible-lg">
+                <a href="#"> <p>Support</p> </a>
+              </li>
+              <!-- START Alert menu -->
+              <li class="dropdown dropdown-list">
+                <a
+                  id="user-block-toggle"
+                  href="#user-block"
+                  data-toggle="collapse"
+                >
+                  <em class="icon-user"></em>
+                </a>
+              </li>
+              <!-- END Alert menu -->
+              <!-- START Offsidebar button -->
+              <li>
+                <a
+                  href="#"
+                  data-toggle-state="offsidebar-open"
+                  data-no-persist="true"
+                >
+                  <span>English</span>
+                </a>
+              </li>
+              <!-- END Offsidebar menu -->
+            </ul>
+            <!-- END Right Navbar -->
+          </div>
+          <!-- END Nav wrapper -->
+        </nav>
+        <!-- END Top Navbar -->
+      </header>
+      <!-- sidebar -->
+
+      <!-- offsidebar -->
+
+      <!-- Main section -->
+      <section>
+        <!-- Page content -->
+        <div class="content-wrapper">
+          <div class="col-lg-12">
+            <label style="font-size: 3vh">Trade History</label> <br />
+            <br />
+
+            <div style="border:none !important">
+              <div class="col-lg-9">
+                <div class="trade-h-label">
+                  <div class="box">
+                    <label class="control-label">Date:</label>
+                  </div>
+                  <div class="box">
+                    <div class="input-group date" id="datetimepicker1">
+                      <input type="text" class="form-control " />
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="box">
+                    <label class="control-label"> to </label>
+                  </div>
+                  <div class="box">
+                    <div class="input-group date" id="datetimepicker2">
+                      <input type="text" class="form-control" />
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="box">
+                    <label class="control-label">Pair:</label>
+                  </div>
+                  <div class="box">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="lname"
+                      id="lname"
+                      placeholder="Coin"
+                    />
+                  </div>
+                  <div class="box">
+                    <label class="control-label"> or </label>
+                  </div>
+                  <div class="box">
+                    <select class="form-control" id="sel1">
+                      <option>All</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                  </div>
+
+                  <div class="box">
+                    <label class="control-label"> Side: </label>
+                  </div>
+                  <div class="box">
+                    <select class="form-control" id="sel1">
+                      <option>All</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                  </div>
+
+                  <div class="box">
+                    <button type="button" class="btn btn-warning no-r">
+                      Search
+                    </button>
+                  </div>
+                  <div class="box">
+                    <button type="button" class="btn btn-default">Reset</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="box" style="float:right">
+                  <label class="control-label"
+                    ><a href="#" style="color: #595959;"
+                      ><u>ExportComplete Trade History</u></a
+                    >
+                  </label>
+                  <a href="#"
+                    ><img
+                      src="asset\15. Trade history\trade history elements-07.png"
+                      alt="Export"
+                      style="width:20px;height:20px;"
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <br />
+
+            <!-- START table-responsive -->
+            <div class="table-responsive">
+              <table class="table limittable" style="border: 2px solid #EED2A7">
+                <thead style="background-color: #F3F3F3">
+                  <tr>
+                    <th>Date</th>
+                    <th>Pair</th>
+                    <th>Type</th>
+                    <th>Type</th>
+                    <th>Filled</th>
+                    <th>Fee</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+
+            <div class="NoRecordFoundDIV">
+              <img
+                src="asset\15. Trade history\trade history elements-08.png"
+                alt="Export"
+                style="width:80px;height:80px"
+              />
+              <p>
+                <label style="color: grey">You have no trade history</label>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="row" style="border-bottom:1px solid #3a3a3c;">
+        <div style="float:left" class="footerlink">
+          <a>About</a> <a>Terms</a> <a>Privacy</a> <a>Fees</a> <a>Contact</a>
+          <a>API</a> <a>Appy to List</a> <a>Download</a>
+        </div>
+        <div style="float:right" class="sociallink">
+          <img
+            src="asset/Footer/footer-03.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-04.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-05.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-06.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-07.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-08.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-09.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-10.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+          <img
+            src="asset/Footer/footer-11.png"
+            style="height:20px;width:20x; margin: 10px"
+            alt="App Logo"
+          />
+        </div>
+      </div>
+      <p>©2017 - 2018 Amcex. All rights reserved</p>
+    </footer>
+    <!-- =============== VENDOR SCRIPTS =============== -->
+    <!-- MODERNIZR -->
+    <script src="vendor/modernizr/modernizr.custom.js"></script>
+    <!-- MATCHMEDIA POLYFILL -->
+    <script src="vendor/matchMedia/matchMedia.js"></script>
+    <!-- JQUERY -->
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <!-- BOOTSTRAP -->
+    <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- STORAGE API -->
+    <script src="vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+    <!-- JQUERY EASING -->
+    <script src="vendor/jquery.easing/js/jquery.easing.js"></script>
+    <!-- ANIMO -->
+    <script src="vendor/animo.js/animo.js"></script>
+    <!-- SLIMSCROLL -->
+    <script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- SCREENFULL -->
+    <script src="vendor/screenfull/dist/screenfull.js"></script>
+    <!-- LOCALIZE -->
+    <script src="vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
+    <!-- RTL demo -->
+    <script src="js/demo/demo-rtl.js"></script>
+    <!-- =============== PAGE VENDOR SCRIPTS =============== -->
+    <!-- CHOSEN -->
+    <script src="vendor/chosen_v1.2.0/chosen.jquery.min.js"></script>
+    <!-- SLIDER CTRL -->
+    <script src="vendor/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+    <!-- MOMENT JS -->
+    <script src="vendor/moment/min/moment-with-locales.min.js"></script>
+    <!-- DATETIMEPICKER -->
+    <script
+      type="text/javascript"
+      src="vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"
+    ></script>
+    <!-- Demo -->
+    <script src="js/demo/demo-search.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    />
+
+    <script>
+      $(function() {
+        $("#datetimepicker1").datetimepicker();
+        $("#datetimepicker2").datetimepicker();
+      });
+    </script>
+    <!-- =============== APP SCRIPTS =============== -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Bootstrap Admin App + jQuery">
+    <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+    <title>Order History</title>
+    <!-- =============== VENDOR STYLES ===============-->
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="/vendor/fontawesome/css/font-awesome.min.css">
+    <!-- SIMPLE LINE ICONS-->
+    <link rel="stylesheet" href="/vendor/simple-line-icons/css/simple-line-icons.css">
+    <!-- ANIMATE.CSS-->
+    <link rel="stylesheet" href="/vendor/animate.css/animate.min.css">
+    <!-- WHIRL (spinners)-->
+    <link rel="stylesheet" href="/vendor/whirl/dist/whirl.css">
+    <!-- =============== PAGE VENDOR STYLES ===============-->
+    <!-- WEATHER ICONS-->
+    <link rel="stylesheet" href="/vendor/weather-icons/css/weather-icons.min.css">
+    <!-- =============== BOOTSTRAP STYLES ===============-->
+    <link rel="stylesheet" href="css/bootstrap.css" id="bscss">
+    <!-- =============== APP STYLES ===============-->
+    <link rel="stylesheet" href="css/app.css" id="maincss">
+    <!-- =============== DATE PICKER STLES ===============-->
+    <link rel="stylesheet" href="/vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css">
+</head>
+
+
+<body>
+
+    <div class="wrapper">
+        <header class="topnavbar-wrapper">
+            <!-- START Top Navbar -->
+            <nav class="navbar topnavbar" role="navigation">
+                <!-- START Nav wrapper -->
+                <div class="nav-wrapper">
+                    <!-- START Left navbar -->
+
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <div class="brand-logo">
+                                <img class="img-responsive" src="asset/Logo/logo-01.png" style="height:30px;width:80x; margin: 10px"
+                                    alt="App Logo" />
+                            </div>
+                        </li>
+
+                        <li><a href="#">Exchange</a></li>
+                    </ul>
+                    <!-- END Left navbar -->
+                    <!-- START Right Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Search icon -->
+                        <li>
+                            <a href="#">
+                                <p>Funds</p>
+                            </a>
+                        </li>
+                        <!-- Fullscreen (only desktops) -->
+                        <li>
+                            <a href="#">
+                                <p>Orders</p>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                <p>Join Us</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Support</p>
+                            </a>
+                        </li>
+                        <!-- START Alert menu -->
+                        <li class="dropdown dropdown-list">
+                            <a id="user-block-toggle" href="#user-block" data-toggle="collapse">
+                                <em class="icon-user"></em>
+                            </a>
+                        </li>
+                        <!-- END Alert menu -->
+                        <!-- START Offsidebar button -->
+                        <li>
+                            <a href="#" data-toggle-state="offsidebar-open" data-no-persist="true">
+                                <span>English</span>
+                            </a>
+                        </li>
+                        <!-- END Offsidebar menu -->
+                    </ul>
+                    <!-- END Right Navbar -->
+                </div>
+                <!-- END Nav wrapper -->
+            </nav>
+            <!-- END Top Navbar -->
+        </header>
+
+        <div class="col-lg-12">
+            <label style="font-size: 3vh">Order History</label>
+            <br />
+            <br />
+
+            <div style="border:none !important">
+                <div class="col-lg-9">
+                    <div class="trade-h-label">
+
+                        <div class="box">
+                            <label class="control-label">Date:</label>
+                        </div>
+                        <div class="box">
+                            <div class='input-group date' id='datetimepicker1'>
+                                <input type='text' class="form-control " />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <label class="control-label"> to </label>
+                        </div>
+                        <div class="box">
+                            <div class='input-group date' id='datetimepicker2'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <label class="control-label">Pair:</label>
+                        </div>
+                        <div class="box">
+                            <input type="text" class="form-control" name="lname" id="lname" placeholder="Coin">
+                        </div>
+                        <div class="box">
+                            <label class="control-label"> or </label>
+                        </div>
+                        <div class="box">
+                            <select class="form-control" id="sel1">
+                                <option>All</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+
+                        <div class="box">
+                            <label class="control-label"> Side: </label>
+                        </div>
+                        <div class="box">
+                            <select class="form-control" id="sel1">
+                                <option>All</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+
+
+
+                        <div class="box">
+                            <button type="button" class="btn btn-warning no-r">Search</button>
+                        </div>
+                        <div class="box">
+                            <button type="button" class="btn btn-default">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="box" style="float:right">
+                        <label class="control-label"><a href="#" style="color: #595959;"><u>ExportComplete Trade
+                                    History</u></a>
+                        </label>
+                        <a href="#"><img src="asset\15. Trade history\trade history elements-07.png" alt="Export" style="width:20px;height:20px;"></a>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <!-- START table-responsive-->
+            <div class=" col-lg-12 no-padding "
+            style="min-height: inherit;overflow: auto; clear:both;margin-bottom:20px;">
+                <table class="table limittable" >
+                    <thead style="background-color: #F3F3F3; border: 2px solid #E9C795;">
+                        <tr>
+                            <th>Date</th>
+                            <th>Pair</th>
+                            <th>Type</th>
+                            <th>Side</th>
+                            <th>Average</th>
+                            <th>Price</th>
+                            <th>Filled</th>
+                            <th>Amount</th>
+                            <th>Total</th>
+                            <th>Trigger Conditions</th>
+                            <th>Status</th>
+                            <th>Operation</th>
+                        </tr>
+                    </thead>
+                </table>
+
+                <div class="NoRecordFoundDIV">
+                    <img src="asset\15. Trade history\trade history elements-08.png" alt="Export" style="width:80px;height:80px">
+                    <p><label style="color: grey">You have no trade history</label> </p>
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+    </div>
+
+</body>
+
+<footer>
+    <div class="row" style="border-bottom:2px solid #3a3a3c;">
+        <div style="float:left" class="sociallink">
+            <a>About</a> <a>Terms</a> <a>Privacy</a> <a>Fees</a> <a>Contact</a>
+            <a>API</a> <a>Appy to List</a> <a>Download</a>
+        </div>
+        <div style="float:right">
+            <img src="asset/Footer/footer-03.png" style="height:20px;width:20x; margin: 10px" alt="App Logo" />
+            <img src="asset/Footer/footer-04.png" style="height:20px;width:20x; margin: 10px" alt="App Logo" />
+            <img src="asset/Footer/footer-05.png" style="height:20px;width:20x; margin: 10px" alt="App Logo" />
+            <img src="asset/Footer/footer-06.png" style="height:20px;width:20x; margin: 10px" alt="App Logo" />
+            <img src="asset/Footer/footer-07.png" style="height:20px;width:20x; margin: 10px" alt="App Logo" />
+            <img src="asset/Footer/footer-08.png" style="height:20px;width:20x; margin: 10px" alt="App Logo" />
+            <img src="asset/Footer/footer-09.png" style="height:20px;width:20x; margin: 10px" alt="App Logo" />
+            <img src="asset/Footer/footer-10.png" style="height:20px;width:20x; margin: 10px" alt="App Logo" />
+            <img src="asset/Footer/footer-11.png" style="height:20px;width:20x; margin: 10px" alt="App Logo" />
+        </div>
+    </div>
+    <p>©2017 - 2018 Amcex. All rights reserved</p>
+</footer>
+<!-- =============== VENDOR SCRIPTS ===============-->
+<!-- DATATABLE-->
+<script src="/vendor/datatables-colvis/js/dataTables.colVis.js"></script>
+<!-- DATETIMEPICKER-->
+<script src="/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<!-- MODERNIZR-->
+<script src="/vendor/modernizr/modernizr.custom.js"></script>
+<!-- MATCHMEDIA POLYFILL-->
+<script src="/vendor/matchMedia/matchMedia.js"></script>
+<!-- JQUERY-->
+<script src="/vendor/jquery/dist/jquery.js"></script>
+<!-- BOOTSTRAP-->
+<script src="/vendor/bootstrap/dist/js/bootstrap.js"></script>
+<!-- STORAGE API-->
+<script src="/vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+<!-- JQUERY EASING-->
+<script src="/vendor/jquery.easing/js/jquery.easing.js"></script>
+<!-- ANIMO-->
+<script src="/vendor/animo.js/animo.js"></script>
+<!-- SLIMSCROLL-->
+<script src="/vendor/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- SCREENFULL-->
+<script src="/vendor/screenfull/dist/screenfull.js"></script>
+<!-- LOCALIZE-->
+<script src="/vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
+<!-- RTL demo-->
+<script src="js/demo/demo-rtl.js"></script>
+<!-- =============== PAGE VENDOR SCRIPTS ===============-->
+<!-- SPARKLINE-->
+<script src="vendor/sparkline/index.js"></script>
+<!-- FLOT CHART-->
+<script src="/vendor/flot/jquery.flot.js"></script>
+<script src="/vendor/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+<script src="/vendor/flot/jquery.flot.resize.js"></script>
+<script src="/vendor/flot/jquery.flot.pie.js"></script>
+<script src="/vendor/flot/jquery.flot.time.js"></script>
+<script src="/vendor/flot/jquery.flot.categories.js"></script>
+<script src="/vendor/flot-spline/js/jquery.flot.spline.min.js"></script>
+<!-- EASY PIE CHART-->
+<script src="/vendor/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
+<!-- MOMENT JS-->
+<script src="/vendor/moment/min/moment-with-locales.min.js"></script>
+<!-- DEMO-->
+<script src="js/demo/demo-flot.js"></script>
+<!-- =============== APP SCRIPTS ===============-->
+<script src="js/app.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<script>
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
+        $('#datetimepicker2').datetimepicker();
+    });
+</script>
+</body>
+
+</html>
